@@ -1,6 +1,9 @@
- name: ci-workflow
- on: [push]
- jobs: 
+name: ci-workflow
+on:
+  pull_request:
+    branches:
+      - main
+jobs: 
   check-application:
     runs-on: ubuntu-latest
     steps:
